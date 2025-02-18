@@ -4,13 +4,13 @@ FROM openjdk:22-jdk
 # Set working directory
 WORKDIR /app
 
-# Copy the Maven wrapper and make it executable
-COPY mvnw /app/mvnw
-RUN chmod +x /app/mvnw
+# Copy Maven Wrapper scripts and the .mvn directory
+COPY mvnw ./
+COPY .mvn/ .mvn/
+RUN chmod +x mvnw
 
 # Copy the Maven build files to cache dependencies
-COPY .mvn/ /app/.mvn/
-COPY mvnw /app/mvnw
+
 
 COPY pom.xml .
 COPY src ./src
