@@ -1,5 +1,11 @@
 HELP.md
 target/
+
+# Include Maven Wrapper files
+!.mvn/
+!mvnw
+!mvnw.cmd
+
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
